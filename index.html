@@ -576,7 +576,7 @@
       dayEvts.slice(0, 3).forEach(evt => {
         const chip = document.createElement("div");
         chip.className = `event-chip chip-${evt.who}`;
-        chip.textContent = (evt.time ? evt.time.slice(0,5) + " " : "") + evt.name;
+        const whoLabel = { his:"👨남편", her:"👩아내", both:"💑같이" }[evt.who] || ""; chip.textContent = whoLabel;
         chip.title = evt.name;
         chip.addEventListener("click", e => { e.stopPropagation(); openDelete(evt); });
         cell.appendChild(chip);
