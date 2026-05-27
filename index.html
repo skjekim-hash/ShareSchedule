@@ -114,7 +114,7 @@
     }
     .day-name {
       text-align: center;
-      font-size: .72rem;
+      font-size: .7rem;
       color: var(--soft);
       padding: 4px 0;
       font-weight: 500;
@@ -125,16 +125,17 @@
     .days-grid {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      gap: 4px;
+      gap: 2px;
     }
     .day-cell {
-      min-height: 80px;
+      height: 64px;
       border: 1px solid transparent;
-      border-radius: 10px;
-      padding: 6px 5px 4px;
+      border-radius: 8px;
+      padding: 4px 3px 3px;
       cursor: pointer;
       transition: background .12s, border-color .12s;
       position: relative;
+      overflow: hidden;
     }
     .day-cell:hover { background: var(--parch); border-color: var(--border); }
     .day-cell.other-month .day-num { opacity: .25; }
@@ -143,15 +144,15 @@
       background: var(--ink);
       color: #fff;
       border-radius: 50%;
-      width: 22px; height: 22px;
+      width: 20px; height: 20px;
       display: flex; align-items: center; justify-content: center;
     }
     .day-cell.selected { border-color: var(--her); background: #fdf5f8; }
     .day-num {
-      font-size: .78rem;
+      font-size: .72rem;
       color: var(--ink2);
-      margin-bottom: 3px;
-      width: 22px; height: 22px;
+      margin-bottom: 2px;
+      width: 20px; height: 20px;
       display: flex; align-items: center; justify-content: center;
     }
     .day-cell:nth-child(7n+1) .day-num { color: #c0504a; }
