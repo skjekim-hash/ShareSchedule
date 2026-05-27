@@ -508,6 +508,10 @@
       selectedWho = btn.dataset.who;
       document.querySelectorAll(".who-btn").forEach(b => b.className = "who-btn");
       btn.classList.add(`active-${selectedWho}`);
+      const addBtn = document.getElementById("addBtn");
+      if (selectedWho === "his")  { addBtn.style.background = "var(--his)"; }
+      else if (selectedWho === "her")  { addBtn.style.background = "var(--her)"; }
+      else if (selectedWho === "both") { addBtn.style.background = "var(--both)"; }
     });
   });
 
@@ -670,6 +674,7 @@
     document.getElementById("evtDate").value = "";
     selectedWho = "";
     document.querySelectorAll(".who-btn").forEach(b => b.className = "who-btn");
+    document.getElementById("addBtn").style.background = "var(--ink)";
 
     btn.disabled = false;
     btn.textContent = "일정 추가하기";
