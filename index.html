@@ -480,7 +480,7 @@
     document.getElementById("banner-wrap").style.display = "none";
 
     /* Real-time listener */
-    const q = query(collection(db, "events"), orderBy("date"), orderBy("time"));
+    const q = query(collection(db, "events"), orderBy("date"));
     unsub = onSnapshot(q, snap => {
       const events = snap.docs.map(d => ({ id: d.id, ...d.data() }));
       window._events = events;
